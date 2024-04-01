@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daedalus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css"
+    />
+
+    <style>
+      .nav-item,
+      .btn,
+      .info-button {
+        transition: all 0.3s ease-in-out;
+      }
+      .nav-item:hover,
+      .btn:hover,
+      .info-button:hover {
+        letter-spacing: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class = "nav-container">
+       <header class="uppernav">
+        <div class="uppernav-text">Daedalus.</div>
+        <header class="main-nav">
+          <a href="#About" class="nav-link">
+            <div class="nav-item">About</div>
+          </a>
+          <a href="" class="nav-link"> <div class="nav-item">Intro</div> </a>
+          <a href="" class="nav-link">
+            <div class="nav-item">Contact</div>
+          </a>
+        </header>
+      </header>
+       
+      </div>
+
+      <div class="hero-section">
+        <div class="hero-section-text">Daedalus</div>
+        <a href="#map">
+          <button class="btn">Map</button>
+        </a>
+      </div>
+
+      <div id = "About" class="About">
+        <div class="about-head">About</div>
+        <div class="about-desc">
+          Welcome to Daedalus, your go-to platform for connecting students with
+          local businesses! We're dedicated to fostering vibrant communities by
+          empowering students to discover, review, and recommend exciting places
+          in their area. Our mission is simple: to bridge the gap between
+          students and the diverse array of businesses around them. Whether
+          you're searching for a cozy coffee shop to study in, a trendy
+          restaurant for a night out with friends, or a unique spot for your
+          next adventure, Daedalus has got you covered. What sets us apart is
+          our interactive map feature, where users can explore a curated
+          selection of businesses recommended by fellow students. You can read
+          detailed reviews, check out photos, and get insider tips on the best
+          dishes or services offered. But it doesn't stop there! We believe in
+          the power of community-driven recommendations. That's why we encourage
+          students to share their favorite local spots and help expand our map
+          to include hidden gems waiting to be discovered. Whether you're a
+          foodie, an adventurer, or simply looking for a new hangout spot,
+          Daedalus is here to make your student life more exciting and
+          connected. Join us today and start exploring your neighborhood like
+          never before!
+        </div>
+      </div>
+
+      <section class="map-part">
+        <div id="map">
+          <div class="map-btns">
+            <button onclick="fetchCollection(1)">FOOD</button>
+            <button onclick="fetchCollection(2)">UTILITY</button>
+            <button onclick="fetchCollection(3)">SHOPPING</button>
+            <button onclick="fetchCollection(4)">PGs</button>
+          </div>
+          <div id="themeSwitch">
+            <label for="themeCheckbox">Dark Mode</label>
+            <input type="checkbox" id="theme-checkbox">
+          </div>
+        </div>
+      </section>
+
+      <section class="info">
+        <div   class="info-1">
+          <div class="info-width">
+            <div class="info-head">
+              Know a place that isn’t already there on the map??
+            </div>
+            <div class="info-desc">
+              With the ever-growing economy and entrepreneurial spirit, there
+              are new businesses opening every day!
+            </div>
+            <div class="info-desc">
+              Help the developers by collecting more data about places we don’t
+              know!
+            </div>
+            <div class="info-btn">
+
+              <button id="merge-butt" class="info-button">Merge Request</button>
+            </div>
+          </div>
+        </div>
+        <div class="info-2">
+          <div class="info-width">
+            <div class="info-head">
+              Wanna change already posted information?
+            </div>
+            <div class="info-desc">
+              There's always a chance of error! If you think we left some
+              important details or made a mistake. Let us know!
+            </div>
+            <div class="info-desc">
+              <div class = "info2">
+                       Contact the Developers if you have any queries about this project!
+              Thanks for your support! 
+              </div>
+            </div>
+            <div class="info-btn">
+              <button class="info-button">click</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="main-footer">
+        <div class="footer-1">developed with Love by Team 6</div>
+        <div class="footer-2">
+          <div class="procoders">Madhav Bhatnagar -- 2241326</div>
+          <div class="procoders">Yuvraj Chandra -- 2241353</div>
+          <div class="procoders">Michael Vikram Singh -- 2241326</div>
+          <div class="procoders">Ankit Kumar Sahoo -- 2241353</div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+    <script src="script3.js"></script>
+  </body>
+</html>

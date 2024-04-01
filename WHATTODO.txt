@@ -1,0 +1,13 @@
+alright
+
+what we'll do is-- 
+
+instead of having different documents for different places. we'll change the schema to accomodate 
+an entire list of points. 
+
+that way, we'll onlly have to make certain lists for certain genres of places
+
+now to load those points, i'll only have to fetch a particular genre list, instead of loading a bunch of stuff
+
+
+connect these get/fetch calls to buttons and voila!! sexy sexy
