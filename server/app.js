@@ -15,7 +15,7 @@ app.use(cors());
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://madhavbhatnagar:root@cluster0.c1chhiw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+mongoose.connect("<MongoDB URI>");
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => {
