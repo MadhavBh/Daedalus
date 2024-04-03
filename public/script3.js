@@ -191,6 +191,7 @@ function plot(dataCollection, Id){
       });
   }
 
+
 function reload(){
   markers.forEach(marker => marker.remove());
   markers.length = 0;
@@ -201,7 +202,6 @@ function poptest(){
   map.setStyle('mapbox://styles/mapbox/dark-v11');
 
 }
-
 
 //general functions for animations
 const button = document.getElementById('merge-butt');

@@ -160,6 +160,7 @@ input{
   width: 90%;
   margin: 0 auto;
   letter-spacing: 1.2px;
+  line-height: 40px;
 }
 
 .about-head {
@@ -316,7 +317,7 @@ input{
 }
 .info-head {
   font-size: 30px;
-  /* margin: 0px 0; */
+
   padding: 30px 0;
   color: white;
 }
@@ -333,7 +334,7 @@ input{
   padding: 10px 70px;
   color: #3c0753;
   font-size: 22px;
-  /* font-weight: 600; */
+
   border-radius: 30px;
   border: 0;
   outline: 0;
@@ -344,7 +345,7 @@ input{
   padding: 30px 0;
 }
 .main-footer {
-  /* width: 100%; */
+
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -360,11 +361,14 @@ input{
 .footer-2 {
   display: flex;
   flex: 50%;
-  /* justify-content: center; */
+
   justify-content: end;
 
   flex-wrap: wrap;
 }
 .procoders {
   margin: 0px 10px;
+}
+.special-thank{
+  font-size:10px;
 }

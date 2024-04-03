@@ -56,7 +56,10 @@ const featureCollectionSchema = new mongoose.Schema({
   }
 });
 
+
+
 const GeoJSONModel = mongoose.model('GeoJSONModel', featureCollectionSchema);
 
 module.exports = GeoJSONModel;
+
 

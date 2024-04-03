@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const GeoJSONModel = require('./models/Place');
+const ContactModel = require('./models/Contact');
 const cors = require('cors');
 const path = require('path');
 
@@ -56,13 +57,27 @@ app.post('/places/admin', async(req, res)=>{
   }
 });
 
+app.post('/contact', async (req, res) => {
+  try {
+    const { name, email, message } = req.body;
+    const newContact = new ContactModel({ name, email, message });
+    const savedContact = await newContact.save();
+    res.status(201).json(savedContact);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+app.get('/contact-form', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', '../public/contact-form.html'));
+});
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 app.get('/mergereq', (req, res) =>{ 
-  console.log('hello');
+  console.log('Merge Request incoming: ');
   res.sendFile(path.join(__dirname, './adminadd/index.html'));
 });
 // Start the server
